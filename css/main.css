@@ -1,0 +1,5 @@
+html, body{ margin:0; height:100%; }
+.img-box{
+	background:url('../work.JPG') no-repeat center center;
+	min-height: 500px;
+}

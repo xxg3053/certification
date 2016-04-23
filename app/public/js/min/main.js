@@ -1,0 +1,1 @@
+$(".wrap").fullpage({page:".scroll",change:function(n){6==n.cur?$(".start").hide():$(".start").show()}});var updateOrientation=function(){"-90"==window.orientation||"90"==window.orientation?console.log("为了更好的体验，请将手机/平板竖过来！"):console.log("竖屏状态")};window.onorientationchange=updateOrientation;
