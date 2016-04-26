@@ -18,13 +18,13 @@ var minifyCSS = require('gulp-minify-css'),
     rename = require('gulp-rename'),
     less = require('gulp-less');
 
-var css_src_dir = static_dir + '/css/less/*.less';
+var css_src_dir = static_dir + '/css/src/*.css';
 var css_to_dir = static_dir + '/css/min';
 gulp.task('css', function () {
     gulp.src(css_src_dir)
         .pipe(importCss())
-        .pipe(less())
-        //.pipe(minifyCSS())
+        //.pipe(less())
+        .pipe(minifyCSS())
         // .pipe(rename(function(path){
         //      path.dirname = path.dirname.replace('page', 'min');
         // }))
@@ -46,7 +46,7 @@ gulp.task('watch', function () {
         }
     });
 
-    gulp.watch(static_dir + '/css/less/*.less', function(event){
+    gulp.watch(static_dir + '/css/src/*.css', function(event){
         //added, changed or deleted
         if(event.type == 'added' || event.type == 'changed' || event.type == 'deleted'){
             if(t2){

@@ -8,10 +8,10 @@ window.onerror = function (errMsg, scriptURI, lineNumber, columnNumber, errorObj
             "错误详情：": errorObj 
         };
 
-        alert('出错了，下一步将显示错误信息');
-        alert(JSON.stringify(rst, null, 10));
+        //alert('出错了，下一步将显示错误信息');
+        //alert(JSON.stringify(rst, null, 10));
     });
-};
+}; 
 
 
 [].forEach.call(document.querySelectorAll('[data-src]'), function (el) {
@@ -73,6 +73,7 @@ document.querySelector('input').addEventListener('change', function () {
 
             progress.value = 0;
             $('.page6 progress').show();
+            $('.page6 .loading-img').show();
             /* ==================================================== */
             // 原生ajax上传代码，所以看起来特别多 ╮(╯_╰)╭，但绝对能用
             // 其他框架，例如ajax处理formData略有不同，请自行google，baidu。
@@ -87,6 +88,7 @@ document.querySelector('input').addEventListener('change', function () {
                     img.src = rst.base64;
                     progress.value = 0;
                     $('.page6 progress').hide();
+                    $('.page6 .loading-img').hide();
                 } else {
                     // 处理错误
                     alert(data.msg);

@@ -1,0 +1,20 @@
+html {-webkit-text-size-adjust:none;}
+html, body, article, section{height: 100%;width: 100%;}
+.hide{display: none;}
+.wrap{position: relative;}
+.animate{position: relative;top: 1rem;opacity: 0;-webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;}
+.cur .animate{position: relative;top: 0;opacity: 1;}
+
+.page8{background: #d9d9d2 url(../../img/bg_page8.jpg);}
+.body{overflow: hidden;}
+.page{position: relative;background-repeat: no-repeat;background-size: 100% auto;overflow: hidden;}
+
+.page8 .inner{padding-top: 4.138888888888889rem;}
+.page8 .card-box{width: 5.180555555555555rem;height: 8.055555555555555rem;margin:0 auto;padding:0.5138888888888888rem 0 0 0.16666666666666666rem; background: url(../../img/card_bag.png) no-repeat;background-size: 100% 100%;-moz-transform: rotate(-7deg);-webkit-transform: rotate(-7deg);transform: rotate(-7deg);}
+.page8 .card-box img{width: 5.013888888888889rem; height: 7.902777777777778rem;}
+.page8 .foot-text{display: block; margin: 1.5rem 1rem 0 4rem;color: #1896da; font-size: 0.5rem;text-align: right;text-shadow:2px 2px 2px #fff;}
+
+
+.popup{position: absolute;top:50%; left: 50%; width: 5.5rem;height: 3rem; margin-left:-2.75rem; margin-top:-1.5rem; padding:0.5rem;background:rgba(0,0,0,0.5);}
+.popup .txt{padding-top: 0.2rem;padding-bottom: 0.4rem;color: #fff;font-size: 0.5rem;text-align: center;}
+.popup .btn-ok{display: block;width: 2rem;height: 0.7rem;margin:0 auto;background: #ffb44c;color: #fff;font-size: 0.5rem;text-align: center; text-decoration: none;  border-radius: 0.1rem;-moz-border-radius: 0.1rem;-webkit-border-radius: 0.1rem;}

@@ -6,8 +6,8 @@ require_once('File.php');
  */
 class LibCertification{
 
-    static $workTemplateImg = ROOT."/public/img/card.png"; //工作证模版
-    static $workCertDir = ROOT."/public/upload/cert/"; //工作存放的地方
+    static $workTemplateImg = "../public/img/template/card.png"; //工作证模版
+    static $workCertDir = "../public/upload/cert/"; //工作存放的地方
     //相关配置
     static $info = Array(
             //员工姓名 imageTTFText
@@ -18,7 +18,7 @@ class LibCertification{
             'TTF_FONT_RED' => 235,
             'TTF_FONT_GREER' => 104,
             'TTF_FONT_BLUE' => 119,
-            'TTF_FONT_TYPE' => ROOT.'/service/libs/simhei.ttf',
+            'TTF_FONT_TYPE' => '../service/libs/simhei.ttf',
             //放大头照的模版大小
             'HEAD_WIDHT' => 173,
             'HEAD_HEIGHT' => 223,
