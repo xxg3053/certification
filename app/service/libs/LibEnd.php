@@ -6,7 +6,7 @@ require_once('File.php');
  */
 class LibEnd{
 
-    static $workTemplateImg = "../public/img/template/end.png"; //工作证模版
+    static $workTemplateImg = "../public/img/template/end.jpg"; //工作证模版
     static $workCertDir = "../public/upload/end/"; //工作存放的地方
     //相关配置
     static $info = Array(
@@ -127,6 +127,7 @@ class LibEnd{
 
         $certPath = self::$workTemplateImg;
         $certTemp =imagecreatefrompng($certPath); 
+        
        // $nImg = imagerotate($nImg,self::$info['WORK_ROTATE'],imageColorAllocateAlpha($nImg, 0, 0, 0, 127));
          //将大头贴拷贝到工作证上
         imagecopy($certTemp,$nImg,self::$info['COPY_DST_X'],self::$info['COPY_DST_Y'],self::$info['COPY_SRC_X'],self::$info['COPY_SRC_Y'],self::$info['COPY_SRC_W'],self::$info['COPY_SRC_H']); 
@@ -138,6 +139,7 @@ class LibEnd{
         $destination = $destination_folder.time().".".$ftype;  
         //echo($destination);
         imagepng($certTemp, $destination);
+        
         //move_uploaded_file($certTemp, $destination);
         //echo $destination;
         return $destination;
@@ -149,22 +151,16 @@ class LibEnd{
         $tImg = imagerotate($tImg,self::$info['WORK_ROTATE'],imageColorAllocateAlpha($tImg, 0, 0, 0, 127));
        
         $certPath = self::$workTemplateImg;
-        $certTemp =imagecreatefrompng($certPath); 
-        
-        //$image_size = getimagesize($tImg);
+        $certTemp =imagecreatefromjpeg($certPath); 
 
          //将大头贴拷贝到工作证上
         imagecopy($certTemp,$tImg,self::$info['COPY_DST_X'],self::$info['COPY_DST_Y'],self::$info['COPY_SRC_X'],self::$info['COPY_SRC_Y'],imagesx($tImg),imagesy($tImg)); 
-        // 
-        //imagecopy($certTemp,$nImg,self::$info['COPY_DST_X'],self::$info['COPY_DST_Y'],self::$info['COPY_SRC_X'],self::$info['COPY_SRC_Y'],imagesx($nImg),imagesy($nImg));
+        
         $destination_folder = self::$workCertDir;
         $pinfo=pathinfo($certPath);
         $ftype=$pinfo['extension'];  
         $destination = $destination_folder.time().".".$ftype;  
-        //echo($destination);
-        imagepng($certTemp, $destination);
-        //move_uploaded_file($certTemp, $destination);
-        //echo $destination;
+        imagejpeg($certTemp, $destination);
         return $destination;
     }
 

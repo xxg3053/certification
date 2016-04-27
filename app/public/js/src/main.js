@@ -49,7 +49,7 @@ $('.page7 #btn_share').on('click',function(e){
 			  	$('.page7 .loading-img').hide();
 			    var endImgName = data.data.img;
 			    var endImgSrc = '../public/upload/end/'+endImgName;
-			       endImgSrc  = '../public/upload/min/end/'+endImgName;
+			       //endImgSrc  = '../public/upload/min/end/'+endImgName;
 			    // window.location= "share.html?endImg=" + endImgName + "&workImg="+workImgName;
 				$('.page7').hide();
 			  	$('.page8').show(); 

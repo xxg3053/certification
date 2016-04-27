@@ -19,7 +19,7 @@ $cetrName = substr($dest,$end+1);
 $dimgName = substr($cetrName,0,strrpos($cetrName, '.'));
 
 //压缩图片 912 1630
-$result = resizeImg($dest, $desmin, $dimgName, 600, 1072);
+$result = resizeImg($dest, $desmin, $dimgName, 900, (1630/912)*900); //600 1072识别不鸟
 //print_r($dest);
 
 Response::show(200,'ok',Array('img'=>$cetrName));
